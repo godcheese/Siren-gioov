@@ -394,7 +394,7 @@ var home = location.href,
                     nextHref = $(data).find("#pagination a").attr("href");
                     // In the new content
                     $("#main").append(result.fadeIn(500));
-                    $("#pagination a").removeClass("loading").text("Previous");
+                    $("#pagination a").removeClass("loading").text("更多...");
                     if ( nextHref != undefined ) {
                         $("#pagination a").attr("href", nextHref);
                     } else {
