@@ -37,7 +37,7 @@ get_header();
 	
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">	
-		<h1 class="main-title">Posts</h1>
+		<h1 class="main-title">近况</h1>
 		<?php
 		if ( have_posts() ) :
 
@@ -60,7 +60,7 @@ get_header();
 		<?php else : get_template_part( 'tpl/content', 'none' ); endif; ?>
 		</main><!-- #main -->
 		<?php if ( akina_option('pagenav_style') == 'ajax') { ?>
-		<div id="pagination"><?php next_posts_link(__('更多...')); ?></div>
+		<div id="pagination"><?php next_posts_link('Previous'); ?></div>
 		<?php }else{ ?>
 		<nav class="navigator">
 		<?php previous_posts_link('<i class="iconfont">&#xe679;</i>') ?><?php next_posts_link('<i class="iconfont">&#xe6a3;</i>') ?>

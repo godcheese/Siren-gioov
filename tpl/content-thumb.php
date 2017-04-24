@@ -7,7 +7,6 @@
  * @package Akina
  */
 
-global $wp_rewrite;
 $i=0; while ( have_posts() ) : the_post(); $i++;
 $class = ($i%2 == 0) ? 'post-list-thumb-left' : ''; // 如果为偶数
 if(has_post_thumbnail()){
@@ -34,11 +33,11 @@ $the_cat = get_the_category();
 				<div class="post-meta">
 					<span><i class="iconfont">&#xe73d;</i><?php echo get_post_views(get_the_ID()); ?> 热度</span>
 					<span class="comments-number"><i class="iconfont">&#xe731;</i><?php comments_popup_link('NOTHING', '1 条评论', '% 条评论'); ?></span>
-					<span><i class="iconfont">&#xe739;</i><a href="<?php echo esc_url($wp_rewrite->front.$the_cat[0]->slug); ?>"><?php echo $the_cat[0]->cat_name; ?></a>
+					<span><i class="iconfont">&#xe739;</i><a href="<?php echo esc_url(get_category_link($the_cat[0]->cat_ID)); ?>"><?php echo $the_cat[0]->cat_name; ?></a>
 					</span>
 				</div>
 				<div class="float-content">
-					<p class="post-text"><?php echo mb_strimwidth(strip_shortcodes(strip_tags(apply_filters('the_content', $post->post_content))), 0, 120," ...");?></p>
+					<?php the_excerpt(); ?>
 					<div class="post-bottom">
 						<a href="<?php the_permalink(); ?>" class="button-normal"><i class="iconfont">&#xe6a0;</i></a>
 					</div>

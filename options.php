@@ -114,7 +114,7 @@ function optionsframework_options() {
 	$options[] = array(
         'name' => __("主题风格", 'akina'),
         'id' => 'theme_skin',
-        'std' => "#FE9600",
+        'std' => "#dd3333",
         'desc' => __('自定义主题颜色', ''),
         'type' => "color"
     );
@@ -173,7 +173,7 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __('首页文章风格', 'akina'),
 		'id' => 'post_list_style',
-		'std' => "standard",
+		'std' => "imageflow",
 		'type' => "radio",
 		'options' => array(
 			'standard' => __('标准', ''),
@@ -183,7 +183,7 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __('首页文章特色图（仅对标准风格生效）', 'akina'),
 		'id' => 'list_type',
-		'std' => "round",
+		'std' => "square",
 		'type' => "radio",
 		'options' => array(
 			'round' => __('圆形', ''),
@@ -214,42 +214,54 @@ function optionsframework_options() {
 		'name' => __('博主描述', 'options_framework_theme'),
 		'desc' => __('一段自我描述的话', 'options_framework_theme'),
 		'id' => 'admin_des',
-		'std' => '公交车司机终于在众人的指责中将座位让给了老太太',
+		'std' => '一生想做浪漫极客。',
 		'type' => 'textarea');	
 
 	$options[] = array(
 		'name' => __('页脚信息', 'options_framework_theme'),
 		'desc' => __('页脚说明文字，支持HTML代码', 'options_framework_theme'),
 		'id' => 'footer_info',
-		'std' => '&copy; 2016',
+		'std' => '&copy; 2017 极为 GIOOV. Copyright All Reserved.极为 版权所有. <a target="_blank" href="http://www.miitbeian.gov.cn/">浙ICP备14014899号-1</a>',
 		'type' => 'textarea');
 
 	$options[] = array(
 		'name' => __('站长统计', 'options_framework_theme'),
 		'desc' => __('填写统计代码，将被隐藏，如需要在下方填写链接地址', 'options_framework_theme'),
 		'id' => 'site_statistics',
-		'std' => '',
+		'std' => 'var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3307c1c5395e772a577524ce4371f9b1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+',
 		'type' => 'textarea');
 
 	$options[] = array(
 		'name' => __('站长统计后台地址', 'options_framework_theme'),
 		'desc' => __('填写查看统计数据的链接', 'options_framework_theme'),
 		'id' => 'site_statistics_link',
-		'std' => '',
+		'std' => 'http://tongji.baidu.com',
 		'type' => 'text');
 
 	$options[] = array(
 		'name' => __('网站地图地址', 'options_framework_theme'),
 		'desc' => __('Sitemap生成的地图链接', 'options_framework_theme'),
 		'id' => 'site_map_link',
-		'std' => '',
+		'std' => '/sitemap.xml',
 		'type' => 'text');
 
 	$options[] = array(
 		'name' => __('自定义CSS样式', 'options_framework_theme'),
 		'desc' => __('直接填写CSS代码，不需要写style标签', 'options_framework_theme'),
 		'id' => 'site_custom_style',
-		'std' => '',
+		'std' => 'select {
+    width: 341px;
+    height: 30px;
+padding:3px;
+}',
 		'type' => 'textarea');		
 
 		
@@ -302,7 +314,7 @@ function optionsframework_options() {
 
 	 $options[] = array(
 		'name' => __('视频名称', 'options_framework_theme'),
-		'desc' => __('abc.mp4 ，只需要填写视频名称 abc 即可，多个用英文逗号隔开如 abc,efg ，无需在意顺序，因为加载是随机的抽取的 ', 'options_framework_theme'),
+		'desc' => __('abc.mp4 ，只需要填写视频文件名 abc 即可，多个用英文逗号隔开如 abc,efg ，无需在意顺序，因为加载是随机的抽取的 ', 'options_framework_theme'),
 		'id' => 'amv_title',
 		'std' => '',
 		'type' => 'text');
@@ -429,7 +441,7 @@ function optionsframework_options() {
 		'name' => __('新浪微博', 'options_framework_theme'),
 		'desc' => __('新浪微博地址', 'options_framework_theme'),
 		'id' => 'sina',
-		'std' => '',
+		'std' => 'http://weibo.com/handsomedg',
 		'type' => 'text');
 		
 	$options[] = array(
@@ -450,7 +462,7 @@ function optionsframework_options() {
 		'name' => __('GitHub', 'options_framework_theme'),
 		'desc' => __('GitHub地址', 'options_framework_theme'),
 		'id' => 'github',
-		'std' => '',
+		'std' => 'http://github.com/godcheese',
 		'type' => 'text');
 
 	$options[] = array(
@@ -478,14 +490,14 @@ function optionsframework_options() {
 		'name' => __('网易云音乐', 'options_framework_theme'),
 		'desc' => __('网易云音乐地址', 'options_framework_theme'),
 		'id' => 'wangyiyun',
-		'std' => '',
+		'std' => 'http://music.163.com/#/user/home?id=18517343',
 		'type' => 'text');
 
 	$options[] = array(
 		'name' => __('Twitter', 'options_framework_theme'),
 		'desc' => __('推特地址', 'options_framework_theme'),
 		'id' => 'twitter',
-		'std' => '',
+		'std' => 'http://twitter.com/godcheesezlx',
 		'type' => 'text');
 
 	$options[] = array(
@@ -502,6 +514,27 @@ function optionsframework_options() {
 		'std' => '',
 		'type' => 'text');
 
+	$options[] = array(
+		'name' => __('简书', 'options_framework_theme'),
+		'desc' => __('简书地址', 'options_framework_theme'),
+		'id' => 'jianshu',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('CSDN', 'options_framework_theme'),
+		'desc' => __('CSND社区地址', 'options_framework_theme'),
+		'id' => 'csdn',
+		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('知乎', 'options_framework_theme'),
+		'desc' => __('知乎地址', 'options_framework_theme'),
+		'id' => 'zhihu',
+		'std' => '',
+		'type' => 'text');
+
 		
 	//聚焦图链
 	$options[] = array(
@@ -512,7 +545,7 @@ function optionsframework_options() {
 		'name' => __('是否开启聚焦', 'options_framework_theme'),
 		'desc' => __('默认开启', 'options_framework_theme'),
 		'id' => 'top_feature',
-		'std' => '1',
+		'std' => '0',
 		'type' => 'checkbox');	
 
 	$options[] = array(
@@ -610,7 +643,7 @@ function optionsframework_options() {
 		'name' => __('公告内容', 'options_framework_theme'),
 		'desc' => __('公告内容，文字超出142个字节将会被滚动显示（移动端无效），一个汉字 = 3字节，一个字母 = 1字节，自己计算吧', 'options_framework_theme'),
 		'id' => 'notice_title',
-		'std' => '',
+		'std' => '很高兴认识你。',
 		'type' => 'text');
 
 	$options[] = array(
@@ -642,6 +675,13 @@ function optionsframework_options() {
 		'type' => 'checkbox');
 
 	$options[] = array(
+		'name' => __('机器人验证', 'options_framework_theme'),
+		'desc' => __('开启机器人验证', 'options_framework_theme'),
+		'id' => 'norobot',
+		'std' => '0',
+		'type' => 'checkbox');
+
+	$options[] = array(
 		'name' => __('评论UA信息', 'options_framework_theme'),
 		'desc' => __('勾选开启，用户的浏览器，操作系统信息', 'options_framework_theme'),
 		'id' => 'open_useragent',
@@ -666,7 +706,7 @@ function optionsframework_options() {
 		'name' => __('七牛图片cdn', 'options_framework_theme'),
 		'desc' => __('！重要:填写格式为 http://你的二级域名（七牛三级域名）/wp-content/uploads', 'options_framework_theme'),
 		'id' => 'qiniu_cdn',
-		'std' => '',
+		'std' => 'http://static.gioov.com/wp-content/uploads',
 		'type' => 'text');
 
 	$options[] = array(
@@ -706,6 +746,13 @@ function optionsframework_options() {
 		'name' => __('登录后自动跳转', 'options_framework_theme'),
 		'desc' => __('勾选开启，管理员跳转至后台，用户跳转至主页', 'options_framework_theme'),
 		'id' => 'login_urlskip',
+		'std' => '0',
+		'type' => 'checkbox');
+
+	$options[] = array(
+		'name' => __('注册验证', 'options_framework_theme'),
+		'desc' => __('勾选开启滑动验证', 'options_framework_theme'),
+		'id' => 'login_validate',
 		'std' => '0',
 		'type' => 'checkbox');	
 

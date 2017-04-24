@@ -47,12 +47,13 @@ if (akina_option('akina_meta') == true) {
 <?php } ?>
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico"/> 
 <?php wp_head(); ?>
+<!--
 <script type="text/javascript">
 if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
-  alert('您现在正在使用IE浏览器访问本站，遗憾的是我们已经不支持IE了。请下载使用最新的现代浏览器吧！');
-  window.open('https://www.baidu.com/s?wd=Google+Chrome');
+  alert('请抛弃万恶的IE系列浏览器吧。');
 }
 </script>
+-->
 </head>
 <body <?php body_class(); ?>>
 	<section id="main-container">

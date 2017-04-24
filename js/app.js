@@ -394,7 +394,7 @@ var home = location.href,
                     nextHref = $(data).find("#pagination a").attr("href");
                     // In the new content
                     $("#main").append(result.fadeIn(500));
-                    $("#pagination a").removeClass("loading").text("更多...");
+                    $("#pagination a").removeClass("loading").text("Previous");
                     if ( nextHref != undefined ) {
                         $("#pagination a").attr("href", nextHref);
                     } else {
@@ -593,12 +593,13 @@ $(function() {
             fragment: '#page',
             timeout: 8000,
         }).on('pjax:send', function() {
-            $('#loading').fadeIn(300);
+            NProgress.start();
             Siren.MNH();
-        }).on('pjax:complete', function() { 
+        }).on('pjax:complete', function() {
             Siren.AH();
             Siren.PE();
             Siren.CE();
+            NProgress.done();
             $("#loading").fadeOut(500);
             if(Poi.codelamp == 'open'){ self.Prism.highlightAll(event) }; // 解决Prism.js代码高亮
             if($('.ds-thread').length > 0) {  // 解决多说问题
@@ -619,6 +620,11 @@ $(function() {
                 $('.js-search').toggleClass('is-visible');
             } 
         });
+        window.addEventListener('popstate',function(e) {
+            Siren.AH();
+            Siren.PE();
+            Siren.CE();
+        },false);
     }
 
     // 点赞
@@ -646,7 +652,8 @@ $(function() {
         $(this).postLike();
     }); 
 
-   
+    console.log("%c Louie %c","background:#24272A; color:#ffffff","","http://i94.me");
+    console.log("%c Github %c","background:#24272A; color:#ffffff","","https://github.com/louie-senpai"); 
 
 });
 
