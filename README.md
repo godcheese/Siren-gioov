@@ -2,6 +2,11 @@
 基于Siren主题自己修改而来，仅供自用，不对外发布，版权归原作者所有。
 ### https://github.com/godcheese/Siren-gioov
 
+## Screen Capture
+[![](/screencapture.png 'Screen Capture')](http://www.gioov.com){:target="_blank"}
+
+
+
 #### + 分类模版
 #### + 话题模版
 #### * 不显示登录提示
