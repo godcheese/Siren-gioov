@@ -3,9 +3,7 @@
 ### https://github.com/godcheese/Siren-gioov
 
 ## Screen Capture
-[![](/screencapture.png 'Screen Capture')](http://www.gioov.com){:target="_blank"}
-
-
+[![](/screencapture.png 'Screen Capture')](http://www.gioov.com)
 
 #### + 分类模版
 #### + 话题模版
