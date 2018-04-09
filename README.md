@@ -3,7 +3,7 @@
 ### https://github.com/godcheese/Siren-gioov
 
 ## Screenshots
-[![](/screenshot.png 'screenshot')](http://www.gioov.com)
+[![](/screenshot_1.png 'screenshot')](http://www.gioov.com)
 
 #### + 分类模版
 #### + 话题模版
