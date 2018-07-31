@@ -1,6 +1,6 @@
 # Siren-gioov
 基于Siren主题自己修改而来，仅供自用，不对外发布，版权归原作者所有。
-### https://github.com/godcheese/Siren-gioov
+### https://github.com/godcheese/Siren-gioov (基于 [Siren](https://github.com/louie-senpai/Siren) 主题修改而来)
 
 ## Screenshots
 [![](/screenshot_1.png 'screenshot')](http://www.gioov.com)
